@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amazon</title>
+
+  <!-- Bootstrap CSS (optional utilities & components) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CDN (for utility-first styling) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!---favicon-->
+  <link rel="icon" type="image/png" href="https://www.tripfiction.com/wp-content/uploads/2016/08/1920x1080-brands-amazon-logo.jpg">
+  <!-- Small custom styles -->
+  <style>
+    /* Make Bootstrap components and Tailwind play nicely in this demo */
+    .search-input { max-width: 720px; }
+    .product-card img { height: 180px; object-fit: cover; }
+    .badge-deal { background: linear-gradient(90deg,#f59e0b,#f97316); color: white; }
+    /* slight shadow like Amazon */
+    .card-shadow { box-shadow: 0 6px 18px rgba(0,0,0,0.08); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Top Navbar -->
+  <header class="amazon-header py-2 px-4 d-flex align-items-center justify-content-between bg-black text-white">
+    <!-- Logo -->
+    <div class="d-flex align-items-center">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAA4CAMAAABe34GAAAAApVBMVEUUHSgXICv///8AAAARGyYAFyoAEB4AGikAGSn/VgAOGSUDEyAAGykMFyRydHgdIyzn5+jU1NVGSVAABBhqbHCgoaNTVlt7fYAAABEjKTNcX2Q9QkiEhokAAAg3PEL4+PnFxsesra8tMjuQkpW8vb/e3t9BKSsAESNtDwClJwB0EQC+QQ+0PxZeKiKdOhqMNhzNRhAkHyd4MR/dSwxDJCToTQo2IiZXVg3LAAABVElEQVRIie3Sa2+CMBQG4Pq2FCiUq4JcFLnthsqcl///09a5ZJHpTPw83pw06cmTpukpIQ9k8gge9ahH/V8145wwS3AmOSGCW0RYlsWI6hLVlUMteOzMk9TNwywOeZKniyxN02ThTKlMeby0BjosPKwieGiBsoKPui4KRD6woqoLyS40m+RRiQBZDdp4auO3lPpthEoVahdTfqm556+UTnLQ0kvQtC2tEardEiliPtTcAZ0pXdVfegZ1boYyChBM4SK2hlpUUHf91k0RoWjbsmjhNMCMIpdwLjWRJKBPz4lkriRuWC3DCX95fdNptpwLV4hEDN9bSKNba7oQhDGiVn2z7U3CpGKq2PUstXdzu9MM3bZ1Q7M/9gdT+2uWZ96b5rHb9v12vTePp25j39NEt/u9eU630Wz9N776VbZm7A4nohlX8pZWYSq36G19J6Me9ah/9CdUPRhhrOhmdgAAAABJRU5ErkJggg==" alt="Amazon" width="50">
+      <div class="ms-3">
+        <small>Delivering to Thiruvananthapuram 695005</small><br>
+        <span class="fw-bold">Update location</span>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="flex-grow mx-4 d-flex">
+      <select class="form-select w-auto">
+        <option>All</option>
+        <option>Electronics</option>
+        <option>Fashion</option>
+      </select>
+      <input type="text" class="form-control" placeholder="Search Amazon.in">
+      <button class="btn btn-warning">
+        <i class="bi bi-search"></i> 🔍
+      </button>
+    </div>
+
+    <!-- Right Side -->
+    <div class="d-flex align-items-center gap-4">
+      <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  EN
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Hindi</a></li>
+    <li><a class="dropdown-item" href="#">Malayalam</a></li>
+    <li><a class="dropdown-item" href="#">Tamil</a></li>
+  </ul>
+</div>
+      <div>
+        <small>Hello, sign in</small><br>
+        <span class="fw-bold">Account & Lists ⬇️</span>
+      </div>
+      <div>
+        <small>Returns</small><br>
+        <span class="fw-bold">& Orders</span>
+      </div>
+      <div class="d-flex align-items-center">
+        🛒 <span class="fw-bold ms-1">Cart</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Secondary Nav -->
+  <nav class="nav-links py-2 px-4 d-flex align-items-center bg-gray-800 text-white">
+    <span class="me-3">☰ All</span>
+    <a class="px-2 hover:underline whitespace-nowrap" href="#">Fresh</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">MX player</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">sell</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Bestseller</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Today's Deals</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Mobiles</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Prime</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Coustomer service</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Electronics</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Fashion</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">New release</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Home & kitchen</a>
+        <a class="px-2 hover:underline whitespace-nowrap" href="#">Amazon pay</a>
+  </nav>
+  </header>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobileMenu" class="bg-white border-b hidden">
+    <div class="p-3">
+      <a class="block py-2" href="#">Hello, Sign in</a>
+      <a class="block py-2" href="#">Orders</a>
+      <a class="block py-2" href="#">Your Prime</a>
+      <a class="block py-2" href="#">Today's Deals</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="container mx-auto px-4 py-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="md:col-span-2">
+        <div class="relative rounded-lg overflow-hidden card-shadow">
+          <img src="https://m.media-amazon.com/images/G/31/img23/WA/July/PD/XGL/header/comb/eng-pc.gif" alt="hero" class="w-full h-64 object-cover"/>
+          <div class="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent flex items-center">
+            <div class="p-6 text-white max-w-xl">
+              <h1 class="text-3xl font-bold">Deals & Discounts</h1>
+              <p class="mt-2 text-sm">Up to 60% off — curated picks for you</p>
+              <a class="mt-4 inline-block btn btn-light" href="#">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right column: small promo cards -->
+      <aside class="space-y-4">
+        <div class="p-4 bg-white rounded card-shadow">
+          <h4 class="font-semibold">Subscribe & Save</h4>
+          <p class="text-sm text-gray-600">Save on recurring orders</p>
+        </div>
+        <div class="p-4 bg-white rounded card-shadow">
+          <h4 class="font-semibold">Gift Cards</h4>
+          <p class="text-sm text-gray-600">E-gift cards for every occasion</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Product grid -->
+  <main class="container mx-auto px-4 pb-12">
+    <h2 class="text-xl font-bold mb-4">Featured products</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Product card template: replicate for more -->
+
+
+<article class="bg-white rounded card-shadow p-3 product-card">
+      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxIREhAREhAQERAVDxAQGBUQEhIPFRIVFhEWFxURFRMYHCggGBolHRUTITEhJSkrLi4uFx8zODMsNygtMisBCgoKDg0OGhAQGisdHSUyNS0rLS0rLTcrLSstLS0tLy0tNSstLS0rKy0tLS0tLTgtLS0uKy0tLTYrLS0tLTcuK//AABEIAQMAwgMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABgcDBAUCAQj/xABMEAACAQMABQYJBQ0GBwAAAAAAAQIDBBEFBhIhMRNBUXGBkQciMlJhobHBwhQVI3KSFiRCU1Rig5Oio9HS0xc0RIKy4TNDY2RzdbP/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAJhEBAQACAgEDAgcAAAAAAAAAAAECEQMxEgQhQRMyFSJRYXGRof/aAAwDAQACEQMRAD8AvEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjtzrpZwbSqSqNPH0cJSXZLg+wG0iBE56/2y4U7h9UKfvmeP7Qbf8AE3HdT/nJ8ar5RLwRD+0G3/E3HdT/AJz3HX62fGncLrjB+yY8aeUSwEahrxZvjKpHrpzfsydfRml6Fwm6NWM8YyllSWeDcWk0RqpllbwACQAAAAAAAAAAAAAAAAAAAABr6QqbNKrLopTl3RbKWsaPiQ+qvYW5rVV2LO7l/wBtWXa4NL2lXW8fFj1I0wjPN5VEcibGAkaajNr8iORNjAwNQarpeg73g9WzfTXTaVPVVpHK2TpanS2b+l+dRrQ9Sl8JXKey2PazwAYtgAAAAAAAAAAAAAAAAAAAABHPCDV2bCv+c6MPtVoJ+rJX1N7l1Ez8KNXFrSj591Sj3RnP4UQWMjXj6ZZ9trbG2arqrna7z58oj58e9F9obe2Ns1PlEfPj3o+qtHzl3jY2do2dX6mzf2T/AOpOP2qM17WjnqR9s62xc2cui7t12SqRT9pF6J2ugBAwbAAAAAAAAAAAAAAAAAAAEe01rVClPkKMHcXPPCLxGn/5J83Ut/UYNedPSt6caNH+81sxi/xcV5VTr34Xp38xR2sGsEqalQoTcY5fKVE/Gqy5/G47Oe8Cx9OaVpVnFXt1GbhPaVC0isQlhrfPPHDa3y5zThpKwXC2UvTWqvPcov2lMS0q485rVNNVOlgXl90VtHyaFpHrjKfvQet9LmjaL9DL+oUNLSlR877zw9IT6X3sC+/uwpebafqH/UPS1ltpeVRtJfo5R+JlBK/n0vvZ6jpKa533gX385WMuNrSXpp1XF92yvaYZvR8nFqrXt5RlGUXP6SKlFpp5TfOucpCnpqoudm1DTknxkwP0ra63TpqLuI06tB8Li18ZL69PL9T7CWW1xCpGM6cozhJZUovKa9DPynoXWOtQltU57nulB74TXRKPv4lp6lay8hKFRN/Iq0kqkG88hUf4a9HT0r0ogW8AgSAAAAAAAAAAAAAAAeKs1GMpPgk33LIFV6z3TqVL24y/LdnT/NjBNTa62p/aKV0/VxJ9ZbekJ4s6MnxlCrWl6XUmsN/ZkUtp2rmo+sDnOLe8KlLoOpV0NcU+NGT5vo8VknnZ2ZOm2ovO7DwzJS0TXcZS5CrhSUHmEovaecRUXvk9z3LJMRa5HIy6PYfVQl0etHV+b6yTfI1cLaz9HPds+Vndzc/RznmdCUG4yjKMlxjJOLXPvT3onSlz05vyeXR60fHby81+32HTjAyKBPir9VxGj4dupRUlhr+Pec27tHDfxj0+5kXHS+PJK92NbDRamosVNSpS8iqth/We6L69rZ7GyoYPDRaOoFxuzzpbS61vXrRVdeWpN5KpaU1N5qUnK3lnppvCfbHZfad4i+pz2at/SXBV6dVfpKeM/uyUAAAAAAAAAAAAAAA5etF2qVpczbx9BUS475OLUVu9LR1CNeEF4tJemez3wmveBXmtfiW9OPDFtSj/AK38RR2kZZm+0u/Xx4pyXRCmv3MH7ykp28qtaNOCcpznGEUuMpSeIxXW2gJYqt+05KrTmpODi2lvipSnBPPCGJSai8rFXu8rSV03BTq04upGLyqcZOKpvMIya4KO1OTbe5OWW9xn0z4P9I2asYyrKVe6rchClSqyk6c1FRSnNeLuTSbTaST34R61j1Lu7KhK5hpChdRt5xtq6tqspStZNqPJvOPF2sRxu343ccTEWNa60jc01ThKpGSdJrGysJPKcJLg2nnc1nfvXMc66qyqzc5+U0stLHBJdr3GzqboKvpOdePyunQjQt+WlO4zsxpxaT343JJ56MG1d6q1vlNraWt/Z31W4cknbTjKNLZWW6jxuWNp9UWWmUYZ8ed+XJjR6zJyJ1dZ9U7izoO6p31teUI1vk9SVs03RreZJNcOG/08CMWmlZZSnvjnjjDXdxLzOMcuDkk3vbo7B4nTTTi1lPcblSBilEvYz4+TaN16ThJxfN61zMn/AIOqnjJcz3d5D9M098JdKa7uHtZKvB0/pI9aOezVehjdza9dUp/fVZ/jLK0qdq2v5iYEK1Uf31T9Oi6b7pU17yakLAAAAAAAAAAAAAARfwi/3T9NT95KCO6/UJSs6ris7GKrWUvFjnLWehPPYBW+v/k1Oqn/APCmUfWqyhU2oycZRkpKUW4uLTypJrg0+cvHX1Zpt9MKcv3MV8JRt4vHYFlX1rXuND6u06Dm7mpeX6i1LZk5u4n4znndzts6GvWr9zo3RkrSlQqVac6lK5vbyTi41KrnFU6MIye04qbhvxvfWyC3mhq9ChQqq6kkpQcVtSjGk6m/ahJPtbS4ZZm05o6vClUc7+pXgkp7LnKpGcVKhvlibinm4pSS35W/KeETZZ2phyY5zeN2nWhLnS/zhfqva2Ur+eilH5PXcYRqUljGxCntRqN4w4uUeLWUlu6Naxh85auVK8KOjtI1FcTuIWyhT8iL5FSjvSdTDhzt7TWdyKOd9Vc1VdWo6qxibnLbWFhYlnKwjp6EtXeXD5arVlKSlJzctqbcVuzKWc8wk3dROecwxuWXUWj4R4TloitKtZR0VNaU2o0KcqeLxyWHUkorxpJZeeHi9WKVhFt4Sy3u6yfX+rfK4dW5uquysJ1anKbK6FtLcjDaaBpUXtJOUuZzaeOpJYNfoZ/Lh/E+DW8d2/wxRobMUnxUUn2IwSjuOhXxwRp1lzG2UcnDlb7uNpvyYdb9hJPB3/xI9aIppqrmaiuEVjte9+4l3g6j4660cuXb1+Kfki79Vl99Uf8A1cPXOmTQh+qsfvn6ujraP2t/wkwKtAAAAAAAAAAAAAANDT1LbtrmHnW9aPfTkjfPk45TT4NYAp7WqHKUKcuZ2tGXrmvciitKQxUl1s/QVzbZtqcHxp8vbS+tTniK7lUfYUlrZYuFSTxzgR/JmleVGpRdSo4yak05yak0sJtZ3tIwAAd/Utv5SsP/AJdT2HAO1qnVjGunOcYR2J75NRXDhll+P7ow9VN8Oc/ap5U2/O9SNStB879x4qXtD8oo/rYfxNWvf0IrLrU39WSn6o5O7LKfq+b4+LPf23+io+jvOZpO7VKP574Lp9L9BhvtYYpNUotvzpbl2Li+0j1atKbcpNtvnZzcnJPh7PpvTZd5+0/15cm3lvLb9pZOoFDCk15sn6iu7Ok5SSRdWoOjsKmmvKnBdm0nL9lS7jnekszVmn99Xz5oq2or/LGba/aRJiP6mxzC4q/jburJdUVGn7YSJAAAAAAAAAAAAAAAAABBtYLLk7irT3KFz9NTb3JV4LE6bfNtL/XLoKp1u0cp7W5pptNPc01xT9J+gdM6Mhc0pUp5SeJRlHdKE15M4vma/iuDKq1q0dUpPZu47MvJjcwX0VZLclNfgzxjjv3c6SAoq8s3BvduNXBYuktBuWWkpLpjiSI9daEa4prsAjQOxLREugx/NUuhgcs+5Ol81y6GfVomXQwOWe6dJvgjs0dDPoOzo/QL3eK32AYNWdEZkm0XBoSLp0tuEczf0FGPn1Z+K5L0RWVn0y6CKaJsoQcVLMpNpRpUsyqTfmrHD29RbGq+gpxcbi4jGNVQ2KdKOHG3g1jG7c5tbm1wW7nYHd0TZKhRpUU87EIxz5z/AApdry+02wAAAAAAAAAAAAAAAAAB4rUYzi4TjGcWsOMkpJroae5nsAVF4StA0bSpbStoOjGry22oSls5jyeziLeI8Zblgi3KVPOi/rRTLH8L9P6G1n0XLh9qlN/Ait0y8ksZ5ZWUcm+NKi+xr3HjYj+T0+x/7GQE+MR5145OH5PD7QxHmoUl1vPuPYI8IedfFOS4RpR6o5NrQlpK4ura3nUlsVKmzLYxF7Ki5PHHmizWO/4PKW3pGg/Mp1qn7Dh8YuMJndrS0Lq7bWi+goxhJrDm8znL0OcsvHo4HVAKNQAAAAAAAAAAAAAAAAAAAABDfCvTzY7XmXFGXe3D4ypky5PCTT2tHXPo5GX2a8H7il1Ivj0yz7ZcjJi2htF1GXIyYtobQGXJMfBPSzeVp+bauP26sH8DITtFh+Byn417P0W0F+9b9qK5dLYdrMABm2AAAAAAAAAAAAAAAAAAAAAGhp3Rquretbyk4qpBx2ksuL4p459+Cr6/gxvYvxKttOPS5VIN/wCXZaXeW+CZdIslUrU8HukVwpU5fVqw+LBry1G0kv8ACN9Va399QvIE+VV8Ioz7h9Jfkcv11t/UPcNRNJP/AAuOutQ902XgB5U8Ipen4O9IP8CjH61VfCmWBqFqxOwpVY1KkZ1KlRTewnsxSjhRTe987zhcSUAi2pmMgACFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/9k=" alt="product 2" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Wireless Headphones — Model X</h3>
+          <div class="text-yellow-500 text-sm">★★★★★</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹2,499</div>
+            <div class="text-sm text-gray-500 line-through">₹3,499</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+      <img src="data:image/jpeg;base64,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" alt="product 2" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Smart Watch Series 5</h3>
+          <div class="text-yellow-500 text-sm">★★★★★</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹5,999</div>
+            <div class="text-sm text-gray-500 line-through">₹8,999</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+        <img src="data:image/jpeg;base64,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" alt="product 3" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Noise Cancelling Earbuds</h3>
+ 
+          <div class="text-yellow-500 text-sm">★★★★☆</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹1,799</div>
+           <div class="text-sm text-gray-500 line-through">₹8,999</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLMppAGqi-2ZVSAeaNyBJWPwY2UqX3aDHfjA&s" alt="product 4" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Classic Backpack</h3>
+       
+          <div class="text-yellow-500 text-sm">★★★☆☆</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹999</div>
+            <div class="text-sm text-gray-500 line-through">₹1,999</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVW0W4Ju1npSxHTjpC8GYiQ6G5RMIjbCe92w&s" alt="product 2" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Footwears</h3>
+          <div class="text-yellow-500 text-sm">★★★★★</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹400</div>
+            <div class="text-sm text-gray-500 line-through">₹700</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+      <img src="https://media.theeverygirl.com/wp-content/uploads/2024/10/viral-makeup-product-alternatives-f.jpg" alt="product 2" class="w-full rounded"/>
+        <div class="mt-3">
+          <h3 class="font-semibold text-sm">Makeup products </h3>
+
+          <div class="text-yellow-500 text-sm">★★★☆☆</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹100,00</div>
+            <div class="text-sm text-gray-500 line-through">₹899</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+      <img src=" https://m.media-amazon.com/images/I/61E2x1+oQOL._AC_SY400_.jpg"  alt="product 2" class="w-full rounded"/>
+      <div class="mt-3">
+          <h3 class="font-semibold text-sm">Furnitures</h3>
+          <div class="text-yellow-500 text-sm">★★★★★</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹40,000</div>
+            <div class="text-sm text-gray-500 line-through">₹37,999</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+
+      <article class="bg-white rounded card-shadow p-3 product-card">
+      <img src="data:image/jpeg;base64,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" alt="product 2" class="w-full rounded"/>
+      <div class="mt-3">
+          <h3 class="font-semibold text-sm">Applicance</h3>
+          <div class="text-yellow-500 text-sm">★★★☆☆</div>
+          <div class="mt-2">
+            <div class="text-lg font-bold">₹20,000</div>
+            <div class="text-sm text-gray-500 line-through">₹37,999</div>
+          </div>
+          <button class="mt-3 w-full btn btn-primary">Add Cart</button>
+        </div>
+      </article>
+      <!-- Add more cards as needed -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <!-- Amazon-like Footer -->
+<footer class="bg-[#232F3E] text-white">
+  <!-- Back to top -->
+  <div class="bg-[#37475A] py-3 text-center text-sm cursor-pointer hover:underline">
+    Back to top
+  </div>
+
+  <!-- Footer main links -->
+  <div class="container mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    
+    <!-- Column 1 -->
+    <div>
+      <h5 class="font-semibold mb-3">Get to Know Us</h5>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="#" class="hover:underline">About Amazon</a></li>
+        <li><a href="#" class="hover:underline">Careers</a></li>
+        <li><a href="#" class="hover:underline">Press Releases</a></li>
+        <li><a href="#" class="hover:underline">Amazon Science</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div>
+      <h5 class="font-semibold mb-3">Connect with Us</h5>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="#" class="hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:underline">Twitter</a></li>
+        <li><a href="#" class="hover:underline">Instagram</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div>
+      <h5 class="font-semibold mb-3">Make Money with Us</h5>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="#" class="hover:underline">Sell on Amazon</a></li>
+        <li><a href="#" class="hover:underline">Sell under Amazon Accelerator</a></li>
+        <li><a href="#" class="hover:underline">Protect and Build Your Brand</a></li>
+        <li><a href="#" class="hover:underline">Amazon Global Selling</a></li>
+        <li><a href="#" class="hover:underline">Supply to Amazon</a></li>
+        <li><a href="#" class="hover:underline">Become an Affiliate</a></li>
+        <li><a href="#" class="hover:underline">Fulfilment by Amazon</a></li>
+        <li><a href="#" class="hover:underline">Advertise Your Products</a></li>
+        <li><a href="#" class="hover:underline">Amazon Pay on Merchants</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div>
+      <h5 class="font-semibold mb-3">Let Us Help You</h5>
+      <ul class="space-y-2 text-sm text-gray-200">
+        <li><a href="#" class="hover:underline">Your Account</a></li>
+        <li><a href="#" class="hover:underline">Returns Centre</a></li>
+        <li><a href="#" class="hover:underline">Recalls and Product Safety Alerts</a></li>
+        <li><a href="#" class="hover:underline">100% Purchase Protection</a></li>
+        <li><a href="#" class="hover:underline">Amazon App Download</a></li>
+        <li><a href="#" class="hover:underline">Help</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer bottom -->
+  <div class="border-t border-gray-700 py-6">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center gap-6">
+      <!-- Amazon logo -->
+      <img src="https://static.dezeen.com/uploads/2025/05/amazon-rebrand-2025_dezeen_2364_col_1-1-852x479.jpg" alt="Amazon" class="h-8"/>
+
+      <!-- Language & Country -->
+      <div class="flex gap-4">
+        <button class="flex items-center gap-2 border border-gray-500 px-3 py-1 rounded text-sm">
+          🌐 English
+        </button>
+        <button class="flex items-center gap-2 border border-gray-500 px-3 py-1 rounded text-sm">
+          India
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Minimal JS: Mobile toggle + Bootstrap bundle -->
+  <script>
+    const btn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
